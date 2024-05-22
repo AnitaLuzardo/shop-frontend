@@ -1,15 +1,21 @@
-import { Route, Routes } from "react-router-dom"
-import routes from "./routerConfig"
+import { Route, Routes } from "react-router-dom";
+import routes from "./routerConfig";
+import Navbar from "./components/Navbar/Navbar";
+// import DefaultSidebar from "./components/Navbar/Navbar";
 
 export const AppRouter = () => {
 
   return(
-    <Routes>
-      {
-        routes.map(({path, Component}, i) =>(
-          <Route key={i} path={path} element={<Component/>}/>
-        ))
-      }
-    </Routes>
+    <>
+      <Navbar />
+      <Routes>
+        {
+          routes.map(({path, Component}, i) =>(
+            <Route key={i} path={path} element={<Component/>}/>
+          ))
+        }
+      </Routes>
+    </>
+    
   )
 }

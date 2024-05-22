@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Login from '../components/Login.jsx';
+import loginStyle from '../styles/login.module.css'
+// import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className={loginStyle.containerLogin}>
+      <Login />
+    </div>
+    
   )
 }
 
