@@ -30,7 +30,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex items-center justify-between bg-[#262741] py-4 px-7 shadow-md relative">
+    <div className={`flex items-center justify-between bg-[#262741] 
+      py-4 px-7 shadow-md relative`}>
       <div className="font-bold text-2xl cursor-pointer flex items-center text-slate-300">
         <Link to="/">
           <span className="pt-2">Shopping Cart</span>
@@ -40,10 +41,10 @@ const Navbar = () => {
         <ul className="flex space-x-4">
           {linking.map((link) => (
             <li key={link.name} className="flex items-center text-slate-300">
-              <div className="bg-[#f2f1f2] p-1 rounded-xl">
+              <div className="bg-[#f2f1f294] p-1 rounded-xl">
                 <img src={link.url} alt={link.name} className="w-6 h-6" />
               </div>
-              <Link to={link.link} className="text-xl ml-3">{link.name}</Link>
+              <Link to={link.link} className="text-xl ml-1">{link.name}</Link>
             </li>
           ))}
         </ul>
@@ -71,10 +72,10 @@ const Navbar = () => {
             className="my-7 text-xl flex items-center w-full pl-8 text-slate-300"
             onClick={handleLinkClick}
           >
-            <div className="bg-[#f2f1f2] p-2 rounded-xl">
+            <div className="bg-[#f2f1f294] p-2 rounded-xl">
               <img src={link.url} alt={link.name} className="w-6 h-6" />
             </div>
-            <Link to={link.link} className="ml-3">{link.name}</Link>
+            <Link to={link.link} className="ml-1">{link.name}</Link>
           </li>
         ))}
       </ul>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Home = React.lazy(()=> import ('./modules/sessionsHome/screens/Home'));
-export const Products = React.lazy(()=> import ('./modules/products/screens/products'));
+export const Products = React.lazy(()=> import ('./modules/products/screens/Products'));
 export const ShoppingCart = React.lazy(() => import ('./modules/shoppingCarts/screens/ShoppingCart'))
 
 
