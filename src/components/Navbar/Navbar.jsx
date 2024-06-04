@@ -41,8 +41,8 @@ const Navbar = () => {
         <ul className="flex space-x-4">
           {linking.map((link) => (
             <li key={link.name} className="flex items-center text-slate-300">
-              <div className="bg-[#f2f1f294] p-1 rounded-xl">
-                <img src={link.url} alt={link.name} className="w-6 h-6" />
+              <div className="bg-[#f2f1f294] p-2 rounded-full">
+                <img src={link.url} alt={link.name} className="w-5" />
               </div>
               <Link to={link.link} className="text-xl ml-1">{link.name}</Link>
             </li>
@@ -72,8 +72,8 @@ const Navbar = () => {
             className="my-7 text-xl flex items-center w-full pl-8 text-slate-300"
             onClick={handleLinkClick}
           >
-            <div className="bg-[#f2f1f294] p-2 rounded-xl">
-              <img src={link.url} alt={link.name} className="w-6 h-6" />
+            <div className="bg-[#f2f1f294] p-2 rounded-full">
+              <img src={link.url} alt={link.name} className="w-5" />
             </div>
             <Link to={link.link} className="ml-1">{link.name}</Link>
           </li>

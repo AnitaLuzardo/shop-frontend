@@ -1,6 +1,6 @@
 import { GET_SESSION_SUCCESS, GET_SESSION_ERROR } from "../types/session";
 
-initialState = {
+const initialState = {
   user: null,
   errors: null
 }

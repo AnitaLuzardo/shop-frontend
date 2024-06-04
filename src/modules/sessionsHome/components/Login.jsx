@@ -1,13 +1,3 @@
-// import React from 'react'
-
-// const Login = () => {
-//   return (
-//     <div className='flex justify-center align-center'>Login</div>
-//   )
-// }
-
-// export default Login
-
 import loginStyle from '../styles/login.module.css'
  
 export default function Login() {

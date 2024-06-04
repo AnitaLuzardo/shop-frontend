@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 // import { getUserslist } from '../../../Redux/actions/users';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProductslist } from '../../../Redux/actions/products';
+import catalogStyle from '../styles/catalog.module.css'
 
 
 const Catalog = () => {
@@ -20,7 +21,7 @@ const Catalog = () => {
   }, [])
 
   return (
-    <div>Catalog</div>
+    <div className={catalogStyle.container}>Catalog</div>
   )
 }
 

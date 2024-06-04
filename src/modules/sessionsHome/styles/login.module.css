@@ -55,7 +55,6 @@
   }
   
   .container_login_form {
-    /* background: url('../../../images/cookie_fondoII.jpg'); */
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -64,13 +63,25 @@
   }
   
   .input_login {
-    border: 1px solid grey;
+    border: 1px solid rgba(0, 0, 0, 0.548);
     border-radius: 25px;
     padding: 6px;
     margin: 10px;
-    text-indent: 15px;
+    text-indent: 5px;
     outline: none;
     width: 80%;
+    background-color: transparent;
+  }
+
+  .input_login::selection {
+    background: transparent;
+  }
+
+  .input_login:focus {
+    background-color: transparent;
+  }
+
+  .input_login:hover {
     background-color: transparent;
   }
   

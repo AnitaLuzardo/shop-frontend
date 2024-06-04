@@ -1,0 +1,18 @@
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+
+}
+
+.containerForm {
+	/* background-image: url('../../../components/utils/shopping.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	opacity: initial; */
+	height: 100%;
+}
