@@ -16,19 +16,18 @@ export const getUserError = (error) => {
 };
 
 export const startLogin = async (form, dispatch) => {
-  dispatch(getUserError(null));
   try {
-    const reponse = await axios.post(
+    const response = await axios.post(
       'http://localhost:3000/api/auth/login',
       form
     );
-    const user = reponse.data;
+    const user = response.data;
     dispatch(getUserSuccess(user));
     
-    localStorage.setItem("user", JSON.stringify(user))
+    localStorage.setItem("user", JSON.stringify(user));
 
   } catch (error) {
-    const errors = error.reponse.data.message;
-    dispatch(getUserError(errors))
+    const errors = error.response.data.message;
+    dispatch(getUserError(errors));
   }
 }

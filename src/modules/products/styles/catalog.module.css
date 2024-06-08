@@ -1,6 +1,45 @@
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
+    /* margin-top: 5px; */
+}
+
+.containerProd {
+    width: 70%;
+    display: flex;
+    /* margin: auto; */
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid rgba(104, 101, 101, 0.541);
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.imgProduct {
+    width: 250px;
+}
+
+.infProduct {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.infProduct > h2 {
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: #747274c9;
+}
+
+.button_login {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+
 }

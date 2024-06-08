@@ -9,10 +9,6 @@ import store from '../utils/store.png';
 const Navbar = () => {
 
   let linking = [
-    { name: "Login", 
-      link:"/",
-      url: login
-    },
     { name: "Products", 
       link:"/products",
       url: store
@@ -20,7 +16,11 @@ const Navbar = () => {
     { name: "Cart", 
       link:"/cart", 
       url: cart
-    }
+    },
+    { name: "Login", 
+      link:"/",
+      url: login
+    },
   ];
 
   let [open, setOpen] = useState(false);
