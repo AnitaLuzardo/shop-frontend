@@ -14,7 +14,7 @@ export const getProductslist = async (dispatch) => {
     const resProductList = await axios.get(
       'http://localhost:3000/api/products'
     );
-    console.log('==>>>', resProductList)
+    // console.log('==>>>', resProductList)
     const productsData = resProductList.data;
     dispatch(getProducts(productsData));
   } catch (error) {

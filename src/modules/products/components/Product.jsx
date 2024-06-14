@@ -1,25 +1,36 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProductID } from '../../../Redux/actions/products';
 import { useDispatch, useSelector } from 'react-redux';
 import StyleDetail from '../styles/detail.module.css'
 
 const Product = () => {
-  const paramans = useParams()
+  const paramans = useParams();
   const dispatch = useDispatch();
-  const product = useSelector( state => state.product.product)
+  const product = useSelector( state => state.product.product);
+  const [loading, setLoading] = useState(true);
 
-  console.log('==>', product)
-
-  // console.log('==>', paramans)
+  // console.log('==>', product)
 
   useEffect(() => {
-    getProductID(dispatch, paramans.id)
+    setLoading(true);
+    getProductID(dispatch, paramans.id).then(() => {
+      setLoading(false)
+    })
   },[])
 
-  if (!product) {
-    return null
+  if (loading) {
+    return <div className='flex justify-center items-center text-3xl'>Loading...</div>;
+    console.log('Loading...', loading)
   }
+
+  if (!product) {
+    return <div>Product not found</div>;
+  }
+
+  // if (!product) {
+  //   return null
+  // }
 
   return (
     <div className = {StyleDetail.containerDtl}>
@@ -37,10 +48,8 @@ const Product = () => {
             Add to cart
           </button>
         </div>
-        
       </div>
     </div>
-    
   );
 }
 

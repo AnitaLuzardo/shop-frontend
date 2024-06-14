@@ -13,7 +13,7 @@ const Catalog = () => {
   // const users = useSelector(state => state.users.users);
  
 
-  console.log('list Products', products)
+  // console.log('list Products', products)
 
   // console.log('List', users);
 
