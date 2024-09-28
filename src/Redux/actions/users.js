@@ -1,4 +1,5 @@
 import { GET_USERS_LIST } from "../types/user";
+import httpInstance from '../../helpers/httpInstance'
 import axios from "axios";
 
 export const getUsers = (users) => {
@@ -10,9 +11,7 @@ export const getUsers = (users) => {
 
 export const getUserslist = async (dispacht) => {
   try {
-    const resUserlist = await axios.get (
-      'http://localhost:3000/api/users'
-    );
+    const resUserlist = await httpInstance.get ('/users');
     // console.log('list ==>', resUserlist)
     const userlistData = resUserlist.data;
     dispacht(getUsers(userlistData))

@@ -3,6 +3,7 @@ import { useState }  from 'react';
 import { startLogin } from '../../../Redux/actions/authentication';
 import { useDispatch, useSelector } from 'react-redux';
 
+
 const validateForm = (form) => {
   let errors = {};
   let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
@@ -22,6 +23,7 @@ const validateForm = (form) => {
 
 export default function Login() {
   const dispatch = useDispatch();
+  
   const sessionErrors = useSelector(state => state.session.errors);
 
   const login = async (form) =>{

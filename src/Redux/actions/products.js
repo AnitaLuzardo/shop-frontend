@@ -1,3 +1,4 @@
+import httpInstance from "../../helpers/httpInstance";
 import { GET_PRODUCTS_LIST } from "../types/products";
 import { PRODUCT_DETAIL_SUCCESSFULL, PRODUCT_DETAIL_ERROR } from "../types/products";
 import axios from "axios";
@@ -11,9 +12,7 @@ export const getProducts = (products) => {
 
 export const getProductslist = async (dispatch) => {
   try {
-    const resProductList = await axios.get(
-      'http://localhost:3000/api/products'
-    );
+    const resProductList = await httpInstance.get('/products');
     // console.log('==>>>', resProductList)
     const productsData = resProductList.data;
     dispatch(getProducts(productsData));

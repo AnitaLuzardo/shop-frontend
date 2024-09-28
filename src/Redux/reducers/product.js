@@ -8,7 +8,7 @@ const initialState = {
   errors: null
 };
 
-export default (state= initialState, action) => {
+export default (state = initialState, action) => {
   switch(action.type) {
     case PRODUCT_DETAIL_SUCCESSFULL: {
       return {
